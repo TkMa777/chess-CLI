@@ -24,4 +24,11 @@ public class Board {
             setPieces(new Coordinates(file, 7), new Pawn(Color.BLACK, new Coordinates(file, 7)));
         }
     }
+
+
+    // Vérifie si la case sur l'échiquier, indiquée par les coordonnées,
+    //  est sombre en fonction de son fichier et de son rang.
+    public static Boolean isSquareDark (Coordinates coordinates) {
+        return (((coordinates.file.ordinal() + 1) + coordinates.rank) % 2 ) == 0;
+    }
 }

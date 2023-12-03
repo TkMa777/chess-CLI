@@ -5,10 +5,8 @@ public class Main {
         Board board = new Board();
         board.setupDefaultPiecesPositions();
 
-        /*
-        En utilisant breakpoint,
-        nous vérifions et voyons que les 16 pions sont sur le plateau.
-         */
+        BoardConsoleRenderer boardConsoleRenderer = new BoardConsoleRenderer();
+        boardConsoleRenderer.render(board);
 
     }
 }
