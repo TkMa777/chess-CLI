@@ -15,7 +15,7 @@ public class BoardConsoleRenderer {
     // Dessine un échiquier sur CLI.
     public void render(Board board) {
         for (int rank = 8; rank >= 1 ; rank--) {
-            String line = "     ";
+            String line = " ";
             for (File file : File.values()) {
                 Coordinates coordinates = new Coordinates(file, rank);
                 if (board.isSquareEmpty(coordinates)) {
