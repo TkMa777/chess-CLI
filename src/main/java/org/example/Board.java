@@ -17,6 +17,17 @@ public class Board {
         pieces.put(coordinates, piece);
     }
 
+    public void removePiece(Coordinates coordinates) {
+        pieces.remove(coordinates);
+    }
+
+    public void movePiece(Coordinates from, Coordinates to) {
+        Piece piece = getPiece(from);
+
+        removePiece(from);
+        setPieces(to, piece);
+    }
+
     // vérifiez les carrés vides du tableau à l'aide de la clé
     public boolean isSquareEmpty(Coordinates coordinates) {
         return !pieces.containsKey(coordinates);

@@ -9,12 +9,17 @@ public class Main {
         Board board = new Board();
         board.setupDefaultPiecesPositions();
 
+
+
         BoardConsoleRenderer boardConsoleRenderer = new BoardConsoleRenderer();
         boardConsoleRenderer.render(board);
 
         Piece piece = board.getPiece(new Coordinates(File.G, 8));
 
         Set<Coordinates> availableMoveSquares = piece.getAvailableMoveSquares(board);
+
+        inputCoordinates inputCord = new inputCoordinates();
+        inputCord.input();
 
         int a = 23;
     }
